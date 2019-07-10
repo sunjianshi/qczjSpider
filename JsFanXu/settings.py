@@ -1,0 +1,445 @@
+#!/user/bin/env python
+# -*- coding: utf-8 -*-
+# @Time     : 2018/11/7 17:00
+# @Author   : zequan.shao
+# @File     : settings.py
+# @Software : PyCharm
+
+# 初始访问链接
+START_URL = 'https://k.autohome.com.cn/a1/'
+
+l = ['https://k.autohome.com.cn/suva01/', 'https://k.autohome.com.cn/suva1/', 'https://k.autohome.com.cn/suvb1/', 'https://k.autohome.com.cn/suvc1/',
+                  'https://k.autohome.com.cn/suvd1/', 'https://k.autohome.com.cn/a001/', 'https://k.autohome.com.cn/a01/', 'https://k.autohome.com.cn/a1/',
+                  'https://k.autohome.com.cn/b1/', 'https://k.autohome.com.cn/c1/', 'https://k.autohome.com.cn/d1/', 'https://k.autohome.com.cn/mpv1/',
+                  'https://k.autohome.com.cn/s1/', 'https://k.autohome.com.cn/p1/', 'https://k.autohome.com.cn/mb1/'
+                  ]
+
+START_URL_LIST = ['https://k.autohome.com.cn/a1/']
+
+# 代理池数据库信息
+# 暂时不用，用了IPPool
+PRO_USER = 'shujupaqu'
+PRO_PASSWD = 'shujupaqu'
+PRO_HOST = '47.93.151.74'
+PRO_SID = 'ORCL'
+
+# 使用的中间口碑字段名字和数据库字段名字的映射数据库
+# 暂时没有用
+MID_USER = 'shujupaqu'
+MID_PASSWD = 'shujupaqu'
+MID_HOST = '47.93.151.74'
+MID_SID = 'ORCL'
+
+# 数据存储数据库信息
+STO_USER = 'bq_data'
+STO_PASSWD = 'tiger'
+STO_HOST = '39.107.57.229'
+STO_SID = 'orcl.lan'
+
+# User-Agent 列表
+USER_AGENT = [
+            'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+            'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
+            'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
+            'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1',
+            'Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1',
+            'Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; en) Presto/2.8.131 Version/11.11',
+            'Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11',
+            'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)',
+            'Opera/9.80 (Windows NT 5.1; U; zh-cn) Presto/2.9.168 Version/11.50',
+            'Mozilla/5.0 (Windows NT 5.1; rv:5.0) Gecko/20100101 Firefox/5.0',
+            'Mozilla/5.0 (Windows NT 5.2) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30',
+            'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11',
+            'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER',
+            'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; LBBROWSER)',
+            'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)',
+            'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0',
+            'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+            'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; SE 2.X MetaSr 1.0)',
+            'Mozilla/5.0 (Windows NT 5.1; rv:44.0) Gecko/20100101 Firefox/44.0',
+            'Mozilla/5.0 (Windows; U; Windows NT 5.1) Gecko/20070803 Firefox/1.5.0.12',
+            "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)",
+            "Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 1.0.3705; .NET CLR 1.1.4322)",
+            "Mozilla/4.0 (compatible; MSIE 7.0b; Windows NT 5.2; .NET CLR 1.1.4322; .NET CLR 2.0.50727; InfoPath.2; .NET CLR 3.0.04506.30)",
+            "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN) AppleWebKit/523.15 (KHTML, like Gecko, Safari/419.3) Arora/0.3 (Change: 287 c9dfb30)",
+            "Mozilla/5.0 (X11; U; Linux; en-US) AppleWebKit/527+ (KHTML, like Gecko, Safari/419.3) Arora/0.6",
+            "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.2pre) Gecko/20070215 K-Ninja/2.1.1",
+            "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9) Gecko/20080705 Firefox/3.0 Kapiko/3.0",
+            "Mozilla/5.0 (X11; Linux i686; U;) Gecko/20070322 Kazehakase/0.4.5",
+            "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.8) Gecko Fedora/1.9.0.8-1.fc10 Kazehakase/0.5.6",
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20",
+            "Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; fr) Presto/2.9.168 Version/11.52",
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.11 TaoBrowser/2.0 Safari/536.11",
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.71 Safari/537.1 LBBROWSER",
+            "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; LBBROWSER)",
+            "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E; LBBROWSER)",
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 LBBROWSER",
+            "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)",
+            "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; QQBrowser/7.0.3698.400)",
+            "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)",
+            "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SV1; QQDownload 732; .NET4.0C; .NET4.0E; 360SE)",
+            "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; QQDownload 732; .NET4.0C; .NET4.0E)",
+            "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)",
+            "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1",
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1",
+            "Mozilla/5.0 (iPad; U; CPU OS 4_2_1 like Mac OS X; zh-cn) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5",
+            "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:2.0b13pre) Gecko/20110307 Firefox/4.0b13pre",
+            "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:16.0) Gecko/20100101 Firefox/16.0",
+            "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11",
+            "Mozilla/5.0 (X11; U; Linux x86_64; zh-CN; rv:1.9.2.10) Gecko/20100922 Ubuntu/10.10 (maverick) Firefox/3.6.10",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36",
+]
+
+# 默认请求头部信息
+DEFAULT_HEADER = {
+    # 'Host': '',
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+}
+
+# 设置是否需要使用代理
+PROXIES_SIGN = False
+
+# 设置是否需要使用随机UA
+USER_AGENT_SIGN = True
+
+# Demo----01
+PARTTEN_01 = "var\s?(\S\S_)=\s?'(\S*)'"
+# Demo----02
+PARTTEN_02 = "var\s?\S\S_=\s?function\s?\(\)\s?\{.*?return.*?return.*?\}"
+# Demo----03
+PARTTEN_03 = "function\s?\S\S_\(\)\s?\{.*?return.*?return.*?\}"
+# Demo----04
+PARTTEN_04 = "\S\S_\('\S{1,}?'\)"
+# Demo----05 弥补Demo----03中参数在else中的部分。
+PARTTEN_05 = "function\s?\S\S_\(\)\s?\{.*?return.*?if.*?return.*?return.*?\}"
+# 提取页面字符串
+PARTTEN_STR = "<script>\((?:.|\n)*?\)\(document\);</script>"
+# 提取ruleDict
+PARTTEN_RULEDICT = "\$ruleDict\$\s?=\s?\$GetWindow\$\(\)\[.*?\]\((.*?)\$"
+# 提取rulePosList
+PARTTEN_RULELIST = "\$rulePosList\$\S*?\+(.*?)\$"
+# 提取GetClassName函数中的需要替代的标签类名
+PARTTEN_CLASSNAME = "function\s\$GetClassName\$.*?return(.*?);"
+
+# 提取config配置信息
+PARTTEN_CONFIG = "var\s?config\s?=\s?(.*?)\s+?var"
+# 提取option配置信息
+PARTTEN_OPTION = "var\s?option\s?=\s?(.*?)\s+?var"
+# 提取color配置信息
+PARTTEN_COLOR = "var\s?color\s?=\s?(.*?)\s+?var"
+# 提取innerColor配置信息
+PARTTEN_INNERCOLOR = "var\s?innerColor\s?=\s?(.*?)\s+?var"
+
+# 汽车之家所有配置连接
+PZ_URL_LIST1 = ['https://car.autohome.com.cn/config/series/4673.html', 'https://car.autohome.com.cn/config/series/771.html', 'https://car.autohome.com.cn/config/series/4802.html', 'https://car.autohome.com.cn/config/series/4274.html', 'https://car.autohome.com.cn/config/series/3862.html', 'https://car.autohome.com.cn/config/series/4851.html', 'https://car.autohome.com.cn/config/series/3430.html', 'https://car.autohome.com.cn/config/series/4658.html', 'https://car.autohome.com.cn/config/series/3554.html', 'https://car.autohome.com.cn/config/series/4744.html', 'https://car.autohome.com.cn/config/series/121.html', 'https://car.autohome.com.cn/config/series/4235.html', 'https://car.autohome.com.cn/config/series/4102.html', 'https://car.autohome.com.cn/config/series/3615.html', 'https://car.autohome.com.cn/config/series/3411.html', 'https://car.autohome.com.cn/config/series/4217.html', 'https://car.autohome.com.cn/config/series/4683.html', 'https://car.autohome.com.cn/config/series/3871.html', 'https://car.autohome.com.cn/config/series/4693.html', 'https://car.autohome.com.cn/config/series/4252.html', 'https://car.autohome.com.cn/config/series/3591.html', 'https://car.autohome.com.cn/config/series/4691.html', 'https://car.autohome.com.cn/config/series/2381.html', 'https://car.autohome.com.cn/config/series/3989.html', 'https://car.autohome.com.cn/config/series/4986.html', 'https://car.autohome.com.cn/config/series/4503.html', 'https://car.autohome.com.cn/config/series/3442.html', 'https://car.autohome.com.cn/config/series/3518.html', 'https://car.autohome.com.cn/config/series/4304.html', 'https://car.autohome.com.cn/config/series/3872.html', 'https://car.autohome.com.cn/config/series/2838.html', 'https://car.autohome.com.cn/config/series/4271.html', 'https://car.autohome.com.cn/config/series/4094.html', 'https://car.autohome.com.cn/config/series/4316.html', 'https://car.autohome.com.cn/config/series/4408.html', 'https://car.autohome.com.cn/config/series/3576.html', 'https://car.autohome.com.cn/config/series/2560.html', 'https://car.autohome.com.cn/config/series/3209.html', 'https://car.autohome.com.cn/config/series/3053.html', 'https://car.autohome.com.cn/config/series/4820.html', 'https://car.autohome.com.cn/config/series/3521.html', 'https://car.autohome.com.cn/config/series/4653.html', 'https://car.autohome.com.cn/config/series/3074.html', 'https://car.autohome.com.cn/config/series/2991.html', 'https://car.autohome.com.cn/config/series/4023.html', 'https://car.autohome.com.cn/config/series/4938.html', 'https://car.autohome.com.cn/config/series/4891.html', 'https://car.autohome.com.cn/config/series/4746.html', 'https://car.autohome.com.cn/config/series/4516.html', 'https://car.autohome.com.cn/config/series/286.html', 'https://car.autohome.com.cn/config/series/4441.html', 'https://car.autohome.com.cn/config/series/4660.html', 'https://car.autohome.com.cn/config/series/4115.html', 'https://car.autohome.com.cn/config/series/4196.html', 'https://car.autohome.com.cn/config/series/3339.html', 'https://car.autohome.com.cn/config/series/3913.html', 'https://car.autohome.com.cn/config/series/2228.html', 'https://car.autohome.com.cn/config/series/4230.html', 'https://car.autohome.com.cn/config/series/2334.html', 'https://car.autohome.com.cn/config/series/3893.html', 'https://car.autohome.com.cn/config/series/4759.html', 'https://car.autohome.com.cn/config/series/3008.html', 'https://car.autohome.com.cn/config/series/2927.html', 'https://car.autohome.com.cn/config/series/2583.html', 'https://car.autohome.com.cn/config/series/4696.html', 'https://car.autohome.com.cn/config/series/4074.html', 'https://car.autohome.com.cn/config/series/4885.html', 'https://car.autohome.com.cn/config/series/4609.html', 'https://car.autohome.com.cn/config/series/3150.html', 'https://car.autohome.com.cn/config/series/4070.html', 'https://car.autohome.com.cn/config/series/4502.html', 'https://car.autohome.com.cn/config/series/602.html', 'https://car.autohome.com.cn/config/series/3633.html', 'https://car.autohome.com.cn/config/series/4298.html', 'https://car.autohome.com.cn/config/series/4092.html', 'https://car.autohome.com.cn/config/series/4385.html', 'https://car.autohome.com.cn/config/series/4519.html', 'https://car.autohome.com.cn/config/series/3164.html', 'https://car.autohome.com.cn/config/series/4560.html', 'https://car.autohome.com.cn/config/series/4921.html', 'https://car.autohome.com.cn/config/series/4797.html', 'https://car.autohome.com.cn/config/series/3759.html', 'https://car.autohome.com.cn/config/series/3515.html', 'https://car.autohome.com.cn/config/series/3882.html', 'https://car.autohome.com.cn/config/series/2664.html', 'https://car.autohome.com.cn/config/series/46.html', 'https://car.autohome.com.cn/config/series/60.html', 'https://car.autohome.com.cn/config/series/4232.html', 'https://car.autohome.com.cn/config/series/159.html', 'https://car.autohome.com.cn/config/series/82.html', 'https://car.autohome.com.cn/config/series/172.html', 'https://car.autohome.com.cn/config/series/69.html', 'https://car.autohome.com.cn/config/series/3298.html', 'https://car.autohome.com.cn/config/series/412.html', 'https://car.autohome.com.cn/config/series/4427.html', 'https://car.autohome.com.cn/config/series/3934.html', 'https://car.autohome.com.cn/config/series/580.html', 'https://car.autohome.com.cn/config/series/3683.html', 'https://car.autohome.com.cn/config/series/4665.html', 'https://car.autohome.com.cn/config/series/850.html', 'https://car.autohome.com.cn/config/series/177.html', 'https://car.autohome.com.cn/config/series/802.html', 'https://car.autohome.com.cn/config/series/2024.html', 'https://car.autohome.com.cn/config/series/521.html', 'https://car.autohome.com.cn/config/series/3121.html', 'https://car.autohome.com.cn/config/series/2729.html', 'https://car.autohome.com.cn/config/series/587.html', 'https://car.autohome.com.cn/config/series/3043.html', 'https://car.autohome.com.cn/config/series/4120.html', 'https://car.autohome.com.cn/config/series/2428.html', 'https://car.autohome.com.cn/config/series/2775.html', 'https://car.autohome.com.cn/config/series/3852.html', 'https://car.autohome.com.cn/config/series/2685.html', 'https://car.autohome.com.cn/config/series/2124.html', 'https://car.autohome.com.cn/config/series/758.html', 'https://car.autohome.com.cn/config/series/4635.html', 'https://car.autohome.com.cn/config/series/4737.html', 'https://car.autohome.com.cn/config/series/524.html', 'https://car.autohome.com.cn/config/series/4870.html', 'https://car.autohome.com.cn/config/series/3099.html', 'https://car.autohome.com.cn/config/series/4569.html', 'https://car.autohome.com.cn/config/series/3704.html', 'https://car.autohome.com.cn/config/series/4348.html', 'https://car.autohome.com.cn/config/series/4337.html', 'https://car.autohome.com.cn/config/series/2728.html', 'https://car.autohome.com.cn/config/series/4324.html', 'https://car.autohome.com.cn/config/series/95.html', 'https://car.autohome.com.cn/config/series/3100.html', 'https://car.autohome.com.cn/config/series/462.html', 'https://car.autohome.com.cn/config/series/3901.html', 'https://car.autohome.com.cn/config/series/4380.html', 'https://car.autohome.com.cn/config/series/4218.html', 'https://car.autohome.com.cn/config/series/620.html', 'https://car.autohome.com.cn/config/series/872.html', 'https://car.autohome.com.cn/config/series/3529.html', 'https://car.autohome.com.cn/config/series/75.html', 'https://car.autohome.com.cn/config/series/4088.html', 'https://car.autohome.com.cn/config/series/3217.html', 'https://car.autohome.com.cn/config/series/3827.html', 'https://car.autohome.com.cn/config/series/3993.html', 'https://car.autohome.com.cn/config/series/1004.html', 'https://car.autohome.com.cn/config/series/4890.html', 'https://car.autohome.com.cn/config/series/3216.html', 'https://car.autohome.com.cn/config/series/4522.html', 'https://car.autohome.com.cn/config/series/2989.html', 'https://car.autohome.com.cn/config/series/4781.html', 'https://car.autohome.com.cn/config/series/4689.html', 'https://car.autohome.com.cn/config/series/3575.html', 'https://car.autohome.com.cn/config/series/4149.html', 'https://car.autohome.com.cn/config/series/4459.html', 'https://car.autohome.com.cn/config/series/4589.html', 'https://car.autohome.com.cn/config/series/4826.html', 'https://car.autohome.com.cn/config/series/3836.html', 'https://car.autohome.com.cn/config/series/162.html', 'https://car.autohome.com.cn/config/series/305.html', 'https://car.autohome.com.cn/config/series/102.html', 'https://car.autohome.com.cn/config/series/4175.html', 'https://car.autohome.com.cn/config/series/3230.html', 'https://car.autohome.com.cn/config/series/511.html', 'https://car.autohome.com.cn/config/series/678.html', 'https://car.autohome.com.cn/config/series/672.html', 'https://car.autohome.com.cn/config/series/3720.html', 'https://car.autohome.com.cn/config/series/3357.html', 'https://car.autohome.com.cn/config/series/3201.html', 'https://car.autohome.com.cn/config/series/3277.html', 'https://car.autohome.com.cn/config/series/148.html', 'https://car.autohome.com.cn/config/series/2387.html', 'https://car.autohome.com.cn/config/series/2557.html', 'https://car.autohome.com.cn/config/series/3758.html', 'https://car.autohome.com.cn/config/series/3278.html', 'https://car.autohome.com.cn/config/series/2741.html', 'https://car.autohome.com.cn/config/series/2682.html', 'https://car.autohome.com.cn/config/series/551.html', 'https://car.autohome.com.cn/config/series/3809.html', 'https://car.autohome.com.cn/config/series/903.html', 'https://car.autohome.com.cn/config/series/2139.html', 'https://car.autohome.com.cn/config/series/2482.html', 'https://car.autohome.com.cn/config/series/2456.html', 'https://car.autohome.com.cn/config/series/2566.html', 'https://car.autohome.com.cn/config/series/2451.html', 'https://car.autohome.com.cn/config/series/3657.html', 'https://car.autohome.com.cn/config/series/3829.html', 'https://car.autohome.com.cn/config/series/3955.html', 'https://car.autohome.com.cn/config/series/4270.html', 'https://car.autohome.com.cn/config/series/3191.html', 'https://car.autohome.com.cn/config/series/3136.html', 'https://car.autohome.com.cn/config/series/3661.html', 'https://car.autohome.com.cn/config/series/3697.html', 'https://car.autohome.com.cn/config/series/3916.html', 'https://car.autohome.com.cn/config/series/3631.html', 'https://car.autohome.com.cn/config/series/4137.html', 'https://car.autohome.com.cn/config/series/2476.html', 'https://car.autohome.com.cn/config/series/3990.html', 'https://car.autohome.com.cn/config/series/3991.html', 'https://car.autohome.com.cn/config/series/3052.html', 'https://car.autohome.com.cn/config/series/3311.html', 'https://car.autohome.com.cn/config/series/2469.html', 'https://car.autohome.com.cn/config/series/3231.html', 'https://car.autohome.com.cn/config/series/3279.html', 'https://car.autohome.com.cn/config/series/3776.html', 'https://car.autohome.com.cn/config/series/2570.html', 'https://car.autohome.com.cn/config/series/2488.html', 'https://car.autohome.com.cn/config/series/3017.html', 'https://car.autohome.com.cn/config/series/3877.html', 'https://car.autohome.com.cn/config/series/3775.html', 'https://car.autohome.com.cn/config/series/3505.html', 'https://car.autohome.com.cn/config/series/3504.html', 'https://car.autohome.com.cn/config/series/3162.html', 'https://car.autohome.com.cn/config/series/4887.html', 'https://car.autohome.com.cn/config/series/4166.html', 'https://car.autohome.com.cn/config/series/4701.html', 'https://car.autohome.com.cn/config/series/3582.html', 'https://car.autohome.com.cn/config/series/4353.html', 'https://car.autohome.com.cn/config/series/4645.html', 'https://car.autohome.com.cn/config/series/3460.html', 'https://car.autohome.com.cn/config/series/4646.html', 'https://car.autohome.com.cn/config/series/4690.html', 'https://car.autohome.com.cn/config/series/3858.html', 'https://car.autohome.com.cn/config/series/2615.html', 'https://car.autohome.com.cn/config/series/4932.html', 'https://car.autohome.com.cn/config/series/4871.html', 'https://car.autohome.com.cn/config/series/4481.html', 'https://car.autohome.com.cn/config/series/4247.html', 'https://car.autohome.com.cn/config/series/4168.html', 'https://car.autohome.com.cn/config/series/4099.html', 'https://car.autohome.com.cn/config/series/2778.html', 'https://car.autohome.com.cn/config/series/4976.html', 'https://car.autohome.com.cn/config/series/4072.html', 'https://car.autohome.com.cn/config/series/3397.html', 'https://car.autohome.com.cn/config/series/3035.html', 'https://car.autohome.com.cn/config/series/4305.html', 'https://car.autohome.com.cn/config/series/4473.html', 'https://car.autohome.com.cn/config/series/4086.html', 'https://car.autohome.com.cn/config/series/3292.html', 'https://car.autohome.com.cn/config/series/3495.html', 'https://car.autohome.com.cn/config/series/4824.html', 'https://car.autohome.com.cn/config/series/2896.html', 'https://car.autohome.com.cn/config/series/508.html', 'https://car.autohome.com.cn/config/series/2871.html', 'https://car.autohome.com.cn/config/series/4615.html', 'https://car.autohome.com.cn/config/series/4069.html', 'https://car.autohome.com.cn/config/series/3429.html', 'https://car.autohome.com.cn/config/series/4435.html', 'https://car.autohome.com.cn/config/series/4293.html', 'https://car.autohome.com.cn/config/series/4291.html', 'https://car.autohome.com.cn/config/series/4624.html', 'https://car.autohome.com.cn/config/series/3080.html', 'https://car.autohome.com.cn/config/series/3538.html', 'https://car.autohome.com.cn/config/series/3924.html', 'https://car.autohome.com.cn/config/series/3335.html', 'https://car.autohome.com.cn/config/series/4445.html', 'https://car.autohome.com.cn/config/series/3781.html', 'https://car.autohome.com.cn/config/series/3530.html', 'https://car.autohome.com.cn/config/series/4015.html', 'https://car.autohome.com.cn/config/series/3234.html', 'https://car.autohome.com.cn/config/series/4111.html', 'https://car.autohome.com.cn/config/series/2333.html', 'https://car.autohome.com.cn/config/series/3928.html', 'https://car.autohome.com.cn/config/series/3824.html', 'https://car.autohome.com.cn/config/series/3664.html', 'https://car.autohome.com.cn/config/series/3454.html', 'https://car.autohome.com.cn/config/series/4632.html', 'https://car.autohome.com.cn/config/series/4444.html', 'https://car.autohome.com.cn/config/series/3081.html', 'https://car.autohome.com.cn/config/series/4383.html', 'https://car.autohome.com.cn/config/series/3545.html', 'https://car.autohome.com.cn/config/series/3535.html', 'https://car.autohome.com.cn/config/series/3983.html', 'https://car.autohome.com.cn/config/series/4169.html', 'https://car.autohome.com.cn/config/series/4497.html', 'https://car.autohome.com.cn/config/series/3839.html', 'https://car.autohome.com.cn/config/series/3786.html', 'https://car.autohome.com.cn/config/series/4302.html', 'https://car.autohome.com.cn/config/series/3980.html', 'https://car.autohome.com.cn/config/series/3926.html', 'https://car.autohome.com.cn/config/series/4320.html', 'https://car.autohome.com.cn/config/series/4164.html', 'https://car.autohome.com.cn/config/series/4879.html', 'https://car.autohome.com.cn/config/series/4321.html', 'https://car.autohome.com.cn/config/series/3284.html', 'https://car.autohome.com.cn/config/series/3922.html', 'https://car.autohome.com.cn/config/series/2134.html', 'https://car.autohome.com.cn/config/series/3306.html', 'https://car.autohome.com.cn/config/series/3220.html', 'https://car.autohome.com.cn/config/series/4934.html', 'https://car.autohome.com.cn/config/series/3898.html', 'https://car.autohome.com.cn/config/series/4948.html', 'https://car.autohome.com.cn/config/series/78.html', 'https://car.autohome.com.cn/config/series/528.html', 'https://car.autohome.com.cn/config/series/110.html', 'https://car.autohome.com.cn/config/series/66.html', 'https://car.autohome.com.cn/config/series/692.html', 'https://car.autohome.com.cn/config/series/496.html', 'https://car.autohome.com.cn/config/series/588.html', 'https://car.autohome.com.cn/config/series/634.html', 'https://car.autohome.com.cn/config/series/164.html', 'https://car.autohome.com.cn/config/series/3154.html', 'https://car.autohome.com.cn/config/series/905.html', 'https://car.autohome.com.cn/config/series/4809.html', 'https://car.autohome.com.cn/config/series/117.html', 'https://car.autohome.com.cn/config/series/4031.html', 'https://car.autohome.com.cn/config/series/3207.html', 'https://car.autohome.com.cn/config/series/834.html', 'https://car.autohome.com.cn/config/series/3171.html', 'https://car.autohome.com.cn/config/series/4762.html', 'https://car.autohome.com.cn/config/series/4410.html', 'https://car.autohome.com.cn/config/series/2313.html', 'https://car.autohome.com.cn/config/series/3073.html', 'https://car.autohome.com.cn/config/series/3811.html', 'https://car.autohome.com.cn/config/series/3553.html', 'https://car.autohome.com.cn/config/series/4462.html', 'https://car.autohome.com.cn/config/series/538.html', 'https://car.autohome.com.cn/config/series/792.html', 'https://car.autohome.com.cn/config/series/4962.html', 'https://car.autohome.com.cn/config/series/859.html', 'https://car.autohome.com.cn/config/series/793.html', 'https://car.autohome.com.cn/config/series/4078.html', 'https://car.autohome.com.cn/config/series/3589.html', 'https://car.autohome.com.cn/config/series/2963.html', 'https://car.autohome.com.cn/config/series/3825.html', 'https://car.autohome.com.cn/config/series/2968.html', 'https://car.autohome.com.cn/config/series/2734.html', 'https://car.autohome.com.cn/config/series/3999.html', 'https://car.autohome.com.cn/config/series/3693.html', 'https://car.autohome.com.cn/config/series/201.html', 'https://car.autohome.com.cn/config/series/3158.html', 'https://car.autohome.com.cn/config/series/4756.html', 'https://car.autohome.com.cn/config/series/2196.html', 'https://car.autohome.com.cn/config/series/2190.html', 'https://car.autohome.com.cn/config/series/3672.html', 'https://car.autohome.com.cn/config/series/4043.html', 'https://car.autohome.com.cn/config/series/56.html', 'https://car.autohome.com.cn/config/series/2299.html', 'https://car.autohome.com.cn/config/series/4381.html', 'https://car.autohome.com.cn/config/series/287.html', 'https://car.autohome.com.cn/config/series/2717.html', 'https://car.autohome.com.cn/config/series/2732.html', 'https://car.autohome.com.cn/config/series/3957.html', 'https://car.autohome.com.cn/config/series/2733.html', 'https://car.autohome.com.cn/config/series/4523.html', 'https://car.autohome.com.cn/config/series/3349.html', 'https://car.autohome.com.cn/config/series/3189.html', 'https://car.autohome.com.cn/config/series/471.html', 'https://car.autohome.com.cn/config/series/4904.html', 'https://car.autohome.com.cn/config/series/2805.html', 'https://car.autohome.com.cn/config/series/4386.html', 'https://car.autohome.com.cn/config/series/2992.html', 'https://car.autohome.com.cn/config/series/2952.html', 'https://car.autohome.com.cn/config/series/4834.html', 'https://car.autohome.com.cn/config/series/4654.html', 'https://car.autohome.com.cn/config/series/3312.html', 'https://car.autohome.com.cn/config/series/3006.html', 'https://car.autohome.com.cn/config/series/3977.html', 'https://car.autohome.com.cn/config/series/4317.html', 'https://car.autohome.com.cn/config/series/4987.html', 'https://car.autohome.com.cn/config/series/3326.html', 'https://car.autohome.com.cn/config/series/153.html', 'https://car.autohome.com.cn/config/series/178.html', 'https://car.autohome.com.cn/config/series/59.html', 'https://car.autohome.com.cn/config/series/703.html', 'https://car.autohome.com.cn/config/series/146.html', 'https://car.autohome.com.cn/config/series/3665.html', 'https://car.autohome.com.cn/config/series/341.html', 'https://car.autohome.com.cn/config/series/2197.html', 'https://car.autohome.com.cn/config/series/289.html', 'https://car.autohome.com.cn/config/series/4322.html', 'https://car.autohome.com.cn/config/series/3014.html', 'https://car.autohome.com.cn/config/series/4345.html', 'https://car.autohome.com.cn/config/series/2353.html', 'https://car.autohome.com.cn/config/series/3562.html', 'https://car.autohome.com.cn/config/series/2462.html', 'https://car.autohome.com.cn/config/series/4307.html', 'https://car.autohome.com.cn/config/series/4241.html', 'https://car.autohome.com.cn/config/series/3101.html', 'https://car.autohome.com.cn/config/series/4847.html', 'https://car.autohome.com.cn/config/series/2860.html', 'https://car.autohome.com.cn/config/series/4178.html', 'https://car.autohome.com.cn/config/series/4586.html', 'https://car.autohome.com.cn/config/series/4436.html', 'https://car.autohome.com.cn/config/series/3935.html', 'https://car.autohome.com.cn/config/series/4775.html', 'https://car.autohome.com.cn/config/series/4930.html', 'https://car.autohome.com.cn/config/series/4012.html', 'https://car.autohome.com.cn/config/series/2510.html', 'https://car.autohome.com.cn/config/series/4889.html', 'https://car.autohome.com.cn/config/series/2514.html', 'https://car.autohome.com.cn/config/series/3546.html', 'https://car.autohome.com.cn/config/series/2577.html', 'https://car.autohome.com.cn/config/series/2834.html', 'https://car.autohome.com.cn/config/series/4931.html', 'https://car.autohome.com.cn/config/series/4656.html', 'https://car.autohome.com.cn/config/series/3754.html', 'https://car.autohome.com.cn/config/series/4486.html', 'https://car.autohome.com.cn/config/series/2466.html', 'https://car.autohome.com.cn/config/series/2579.html', 'https://car.autohome.com.cn/config/series/2853.html', 'https://car.autohome.com.cn/config/series/4557.html', 'https://car.autohome.com.cn/config/series/2512.html', 'https://car.autohome.com.cn/config/series/3639.html', 'https://car.autohome.com.cn/config/series/2515.html', 'https://car.autohome.com.cn/config/series/2960.html', 'https://car.autohome.com.cn/config/series/3149.html', 'https://car.autohome.com.cn/config/series/3480.html', 'https://car.autohome.com.cn/config/series/3166.html', 'https://car.autohome.com.cn/config/series/2517.html', 'https://car.autohome.com.cn/config/series/2599.html', 'https://car.autohome.com.cn/config/series/2673.html', 'https://car.autohome.com.cn/config/series/314.html', 'https://car.autohome.com.cn/config/series/3386.html', 'https://car.autohome.com.cn/config/series/2123.html', 'https://car.autohome.com.cn/config/series/4868.html', 'https://car.autohome.com.cn/config/series/656.html', 'https://car.autohome.com.cn/config/series/770.html', 'https://car.autohome.com.cn/config/series/4856.html', 'https://car.autohome.com.cn/config/series/564.html', 'https://car.autohome.com.cn/config/series/285.html', 'https://car.autohome.com.cn/config/series/3788.html', 'https://car.autohome.com.cn/config/series/4221.html', 'https://car.autohome.com.cn/config/series/2561.html', 'https://car.autohome.com.cn/config/series/3968.html', 'https://car.autohome.com.cn/config/series/4269.html', 'https://car.autohome.com.cn/config/series/4080.html', 'https://car.autohome.com.cn/config/series/4674.html', 'https://car.autohome.com.cn/config/series/4147.html', 'https://car.autohome.com.cn/config/series/3465.html', 'https://car.autohome.com.cn/config/series/4616.html', 'https://car.autohome.com.cn/config/series/3204.html', 'https://car.autohome.com.cn/config/series/3845.html', 'https://car.autohome.com.cn/config/series/623.html', 'https://car.autohome.com.cn/config/series/4485.html', 'https://car.autohome.com.cn/config/series/4631.html', 'https://car.autohome.com.cn/config/series/3691.html', 'https://car.autohome.com.cn/config/series/2987.html', 'https://car.autohome.com.cn/config/series/4792.html', 'https://car.autohome.com.cn/config/series/1007.html', 'https://car.autohome.com.cn/config/series/2137.html', 'https://car.autohome.com.cn/config/series/3341.html', 'https://car.autohome.com.cn/config/series/4394.html', 'https://car.autohome.com.cn/config/series/4253.html', 'https://car.autohome.com.cn/config/series/3481.html', 'https://car.autohome.com.cn/config/series/874.html', 'https://car.autohome.com.cn/config/series/4800.html', 'https://car.autohome.com.cn/config/series/2863.html', 'https://car.autohome.com.cn/config/series/4852.html', 'https://car.autohome.com.cn/config/series/4370.html', 'https://car.autohome.com.cn/config/series/4167.html', 'https://car.autohome.com.cn/config/series/4587.html', 'https://car.autohome.com.cn/config/series/2027.html', 'https://car.autohome.com.cn/config/series/4453.html', 'https://car.autohome.com.cn/config/series/4133.html', 'https://car.autohome.com.cn/config/series/4663.html', 'https://car.autohome.com.cn/config/series/4608.html', 'https://car.autohome.com.cn/config/series/4745.html', 'https://car.autohome.com.cn/config/series/3766.html', 'https://car.autohome.com.cn/config/series/358.html', 'https://car.autohome.com.cn/config/series/3780.html', 'https://car.autohome.com.cn/config/series/3689.html', 'https://car.autohome.com.cn/config/series/4531.html', 'https://car.autohome.com.cn/config/series/4652.html', 'https://car.autohome.com.cn/config/series/4197.html', 'https://car.autohome.com.cn/config/series/4898.html', 'https://car.autohome.com.cn/config/series/4840.html', 'https://car.autohome.com.cn/config/series/4610.html', 'https://car.autohome.com.cn/config/series/2768.html', 'https://car.autohome.com.cn/config/series/3618.html', 'https://car.autohome.com.cn/config/series/4899.html', 'https://car.autohome.com.cn/config/series/3662.html', 'https://car.autohome.com.cn/config/series/4491.html', 'https://car.autohome.com.cn/config/series/4807.html', 'https://car.autohome.com.cn/config/series/4096.html', 'https://car.autohome.com.cn/config/series/4468.html', 'https://car.autohome.com.cn/config/series/4767.html', 'https://car.autohome.com.cn/config/series/4517.html', 'https://car.autohome.com.cn/config/series/4741.html', 'https://car.autohome.com.cn/config/series/4684.html', 'https://car.autohome.com.cn/config/series/4046.html', 'https://car.autohome.com.cn/config/series/4417.html', 'https://car.autohome.com.cn/config/series/4682.html', 'https://car.autohome.com.cn/config/series/3634.html', 'https://car.autohome.com.cn/config/series/3128.html', 'https://car.autohome.com.cn/config/series/3677.html', 'https://car.autohome.com.cn/config/series/2417.html', 'https://car.autohome.com.cn/config/series/3214.html', 'https://car.autohome.com.cn/config/series/4678.html', 'https://car.autohome.com.cn/config/series/4240.html', 'https://car.autohome.com.cn/config/series/3472.html', 'https://car.autohome.com.cn/config/series/4498.html', 'https://car.autohome.com.cn/config/series/3065.html', 'https://car.autohome.com.cn/config/series/557.html', 'https://car.autohome.com.cn/config/series/4908.html', 'https://car.autohome.com.cn/config/series/3000.html', 'https://car.autohome.com.cn/config/series/3800.html', 'https://car.autohome.com.cn/config/series/4130.html', 'https://car.autohome.com.cn/config/series/4226.html', 'https://car.autohome.com.cn/config/series/622.html', 'https://car.autohome.com.cn/config/series/4982.html', 'https://car.autohome.com.cn/config/series/3954.html', 'https://car.autohome.com.cn/config/series/3195.html', 'https://car.autohome.com.cn/config/series/4754.html', 'https://car.autohome.com.cn/config/series/4234.html', 'https://car.autohome.com.cn/config/series/4256.html', 'https://car.autohome.com.cn/config/series/4489.html', 'https://car.autohome.com.cn/config/series/750.html', 'https://car.autohome.com.cn/config/series/4599.html', 'https://car.autohome.com.cn/config/series/3652.html', 'https://car.autohome.com.cn/config/series/3361.html', 'https://car.autohome.com.cn/config/series/3413.html', 'https://car.autohome.com.cn/config/series/3637.html', 'https://car.autohome.com.cn/config/series/4520.html', 'https://car.autohome.com.cn/config/series/833.html', 'https://car.autohome.com.cn/config/series/3324.html', 'https://car.autohome.com.cn/config/series/4276.html', 'https://car.autohome.com.cn/config/series/2888.html', 'https://car.autohome.com.cn/config/series/3987.html', 'https://car.autohome.com.cn/config/series/500.html', 'https://car.autohome.com.cn/config/series/4233.html', 'https://car.autohome.com.cn/config/series/3765.html', 'https://car.autohome.com.cn/config/series/4555.html', 'https://car.autohome.com.cn/config/series/3793.html', 'https://car.autohome.com.cn/config/series/4923.html', 'https://car.autohome.com.cn/config/series/3426.html', 'https://car.autohome.com.cn/config/series/2294.html', 'https://car.autohome.com.cn/config/series/4039.html', 'https://car.autohome.com.cn/config/series/4336.html', 'https://car.autohome.com.cn/config/series/2883.html', 'https://car.autohome.com.cn/config/series/3899.html', 'https://car.autohome.com.cn/config/series/4431.html', 'https://car.autohome.com.cn/config/series/4097.html', 'https://car.autohome.com.cn/config/series/3264.html', 'https://car.autohome.com.cn/config/series/3795.html', 'https://car.autohome.com.cn/config/series/3075.html', 'https://car.autohome.com.cn/config/series/4095.html', 'https://car.autohome.com.cn/config/series/2752.html', 'https://car.autohome.com.cn/config/series/3896.html', 'https://car.autohome.com.cn/config/series/3417.html', 'https://car.autohome.com.cn/config/series/4009.html', 'https://car.autohome.com.cn/config/series/4146.html', 'https://car.autohome.com.cn/config/series/3971.html', 'https://car.autohome.com.cn/config/series/4984.html', 'https://car.autohome.com.cn/config/series/2126.html', 'https://car.autohome.com.cn/config/series/4518.html', 'https://car.autohome.com.cn/config/series/65.html', 'https://car.autohome.com.cn/config/series/403.html', 'https://car.autohome.com.cn/config/series/18.html', 'https://car.autohome.com.cn/config/series/197.html', 'https://car.autohome.com.cn/config/series/4045.html', 'https://car.autohome.com.cn/config/series/882.html', 'https://car.autohome.com.cn/config/series/4206.html', 'https://car.autohome.com.cn/config/series/2949.html', 'https://car.autohome.com.cn/config/series/3802.html', 'https://car.autohome.com.cn/config/series/4083.html', 'https://car.autohome.com.cn/config/series/740.html', 'https://car.autohome.com.cn/config/series/4472.html', 'https://car.autohome.com.cn/config/series/261.html', 'https://car.autohome.com.cn/config/series/4350.html', 'https://car.autohome.com.cn/config/series/202.html', 'https://car.autohome.com.cn/config/series/2357.html', 'https://car.autohome.com.cn/config/series/450.html', 'https://car.autohome.com.cn/config/series/4029.html', 'https://car.autohome.com.cn/config/series/3097.html', 'https://car.autohome.com.cn/config/series/3731.html', 'https://car.autohome.com.cn/config/series/472.html', 'https://car.autohome.com.cn/config/series/365.html', 'https://car.autohome.com.cn/config/series/2771.html', 'https://car.autohome.com.cn/config/series/4526.html', 'https://car.autohome.com.cn/config/series/3060.html', 'https://car.autohome.com.cn/config/series/3782.html', 'https://car.autohome.com.cn/config/series/2726.html', 'https://car.autohome.com.cn/config/series/342.html', 'https://car.autohome.com.cn/config/series/3627.html', 'https://car.autohome.com.cn/config/series/2420.html', 'https://car.autohome.com.cn/config/series/2718.html', 'https://car.autohome.com.cn/config/series/3463.html', 'https://car.autohome.com.cn/config/series/270.html', 'https://car.autohome.com.cn/config/series/4334.html', 'https://car.autohome.com.cn/config/series/4864.html', 'https://car.autohome.com.cn/config/series/589.html', 'https://car.autohome.com.cn/config/series/2727.html', 'https://car.autohome.com.cn/config/series/2719.html', 'https://car.autohome.com.cn/config/series/166.html', 'https://car.autohome.com.cn/config/series/4487.html', 'https://car.autohome.com.cn/config/series/333.html', 'https://car.autohome.com.cn/config/series/4279.html', 'https://car.autohome.com.cn/config/series/880.html', 'https://car.autohome.com.cn/config/series/4606.html', 'https://car.autohome.com.cn/config/series/4174.html', 'https://car.autohome.com.cn/config/series/3412.html', 'https://car.autohome.com.cn/config/series/2565.html', 'https://car.autohome.com.cn/config/series/86.html', 'https://car.autohome.com.cn/config/series/2107.html', 'https://car.autohome.com.cn/config/series/3823.html', 'https://car.autohome.com.cn/config/series/3064.html', 'https://car.autohome.com.cn/config/series/2084.html', 'https://car.autohome.com.cn/config/series/2540.html', 'https://car.autohome.com.cn/config/series/2113.html', 'https://car.autohome.com.cn/config/series/3783.html', 'https://car.autohome.com.cn/config/series/631.html', 'https://car.autohome.com.cn/config/series/3814.html', 'https://car.autohome.com.cn/config/series/107.html', 'https://car.autohome.com.cn/config/series/4376.html', 'https://car.autohome.com.cn/config/series/3351.html', 'https://car.autohome.com.cn/config/series/4396.html', 'https://car.autohome.com.cn/config/series/4242.html', 'https://car.autohome.com.cn/config/series/4662.html', 'https://car.autohome.com.cn/config/series/2990.html', 'https://car.autohome.com.cn/config/series/4315.html', 'https://car.autohome.com.cn/config/series/4686.html', 'https://car.autohome.com.cn/config/series/4619.html', 'https://car.autohome.com.cn/config/series/3416.html', 'https://car.autohome.com.cn/config/series/3726.html', 'https://car.autohome.com.cn/config/series/4294.html', 'https://car.autohome.com.cn/config/series/3925.html', 'https://car.autohome.com.cn/config/series/4194.html', 'https://car.autohome.com.cn/config/series/3789.html', 'https://car.autohome.com.cn/config/series/3448.html', 'https://car.autohome.com.cn/config/series/2207.html', 'https://car.autohome.com.cn/config/series/473.html', 'https://car.autohome.com.cn/config/series/4132.html', 'https://car.autohome.com.cn/config/series/3384.html', 'https://car.autohome.com.cn/config/series/4425.html', 'https://car.autohome.com.cn/config/series/951.html', 'https://car.autohome.com.cn/config/series/4604.html', 'https://car.autohome.com.cn/config/series/4831.html', 'https://car.autohome.com.cn/config/series/3763.html', 'https://car.autohome.com.cn/config/series/3874.html', 'https://car.autohome.com.cn/config/series/4154.html', 'https://car.autohome.com.cn/config/series/3061.html', 'https://car.autohome.com.cn/config/series/4525.html', 'https://car.autohome.com.cn/config/series/4886.html', 'https://car.autohome.com.cn/config/series/4553.html', 'https://car.autohome.com.cn/config/series/4208.html', 'https://car.autohome.com.cn/config/series/3653.html', 'https://car.autohome.com.cn/config/series/3994.html', 'https://car.autohome.com.cn/config/series/4173.html', 'https://car.autohome.com.cn/config/series/4228.html', 'https://car.autohome.com.cn/config/series/4379.html', 'https://car.autohome.com.cn/config/series/4227.html', 'https://car.autohome.com.cn/config/series/4805.html', 'https://car.autohome.com.cn/config/series/81.html', 'https://car.autohome.com.cn/config/series/145.html', 'https://car.autohome.com.cn/config/series/111.html', 'https://car.autohome.com.cn/config/series/3126.html', 'https://car.autohome.com.cn/config/series/163.html', 'https://car.autohome.com.cn/config/series/2115.html', 'https://car.autohome.com.cn/config/series/4505.html', 'https://car.autohome.com.cn/config/series/209.html', 'https://car.autohome.com.cn/config/series/4077.html', 'https://car.autohome.com.cn/config/series/4259.html', 'https://car.autohome.com.cn/config/series/362.html', 'https://car.autohome.com.cn/config/series/4387.html', 'https://car.autohome.com.cn/config/series/4260.html', 'https://car.autohome.com.cn/config/series/2319.html', 'https://car.autohome.com.cn/config/series/522.html', 'https://car.autohome.com.cn/config/series/4107.html', 'https://car.autohome.com.cn/config/series/705.html', 'https://car.autohome.com.cn/config/series/382.html', 'https://car.autohome.com.cn/config/series/447.html', 'https://car.autohome.com.cn/config/series/2147.html', 'https://car.autohome.com.cn/config/series/2567.html', 'https://car.autohome.com.cn/config/series/749.html', 'https://car.autohome.com.cn/config/series/2086.html', 'https://car.autohome.com.cn/config/series/4222.html', 'https://car.autohome.com.cn/config/series/3112.html', 'https://car.autohome.com.cn/config/series/878.html', 'https://car.autohome.com.cn/config/series/4474.html', 'https://car.autohome.com.cn/config/series/3415.html', 'https://car.autohome.com.cn/config/series/3178.html', 'https://car.autohome.com.cn/config/series/555.html', 'https://car.autohome.com.cn/config/series/2781.html', 'https://car.autohome.com.cn/config/series/3179.html', 'https://car.autohome.com.cn/config/series/2716.html', 'https://car.autohome.com.cn/config/series/4160.html' 'https://car.autohome.com.cn/config/series/4817.html', 'https://car.autohome.com.cn/config/series/614.html', 'https://car.autohome.com.cn/config/series/4402.html', 'https://car.autohome.com.cn/config/series/526.html', 'https://car.autohome.com.cn/config/series/135.html', 'https://car.autohome.com.cn/config/series/442.html', 'https://car.autohome.com.cn/config/series/448.html', 'https://car.autohome.com.cn/config/series/982.html', 'https://car.autohome.com.cn/config/series/871.html', 'https://car.autohome.com.cn/config/series/3085.html', 'https://car.autohome.com.cn/config/series/633.html', 'https://car.autohome.com.cn/config/series/3462.html', 'https://car.autohome.com.cn/config/series/3294.html', 'https://car.autohome.com.cn/config/series/364.html', 'https://car.autohome.com.cn/config/series/16.html', 'https://car.autohome.com.cn/config/series/3751.html', 'https://car.autohome.com.cn/config/series/3457.html', 'https://car.autohome.com.cn/config/series/4882.html', 'https://car.autohome.com.cn/config/series/4702.html', 'https://car.autohome.com.cn/config/series/3170.html', 'https://car.autohome.com.cn/config/series/3959.html', 'https://car.autohome.com.cn/config/series/4105.html', 'https://car.autohome.com.cn/config/series/835.html', 'https://car.autohome.com.cn/config/series/519.html', 'https://car.autohome.com.cn/config/series/4787.html', 'https://car.autohome.com.cn/config/series/987.html', 'https://car.autohome.com.cn/config/series/2922.html', 'https://car.autohome.com.cn/config/series/4139.html', 'https://car.autohome.com.cn/config/series/3556.html', 'https://car.autohome.com.cn/config/series/3347.html', 'https://car.autohome.com.cn/config/series/3405.html', 'https://car.autohome.com.cn/config/series/4171.html', 'https://car.autohome.com.cn/config/series/657.html', 'https://car.autohome.com.cn/config/series/2966.html', 'https://car.autohome.com.cn/config/series/2429.html', 'https://car.autohome.com.cn/config/series/877.html', 'https://car.autohome.com.cn/config/series/875.html', 'https://car.autohome.com.cn/config/series/3104.html', 'https://car.autohome.com.cn/config/series/4972.html', 'https://car.autohome.com.cn/config/series/474.html', 'https://car.autohome.com.cn/config/series/3876.html', 'https://car.autohome.com.cn/config/series/4490.html', 'https://car.autohome.com.cn/config/series/586.html', 'https://car.autohome.com.cn/config/series/4204.html', 'https://car.autohome.com.cn/config/series/4900.html', 'https://car.autohome.com.cn/config/series/3964.html', 'https://car.autohome.com.cn/config/series/425.html', 'https://car.autohome.com.cn/config/series/4392.html', 'https://car.autohome.com.cn/config/series/3873.html', 'https://car.autohome.com.cn/config/series/2761.html', 'https://car.autohome.com.cn/config/series/2886.html', 'https://car.autohome.com.cn/config/series/407.html', 'https://car.autohome.com.cn/config/series/4246.html', 'https://car.autohome.com.cn/config/series/3817.html', 'https://car.autohome.com.cn/config/series/2962.html', 'https://car.autohome.com.cn/config/series/3884.html', 'https://car.autohome.com.cn/config/series/4764.html', 'https://car.autohome.com.cn/config/series/4343.html', 'https://car.autohome.com.cn/config/series/4913.html', 'https://car.autohome.com.cn/config/series/2063.html', 'https://car.autohome.com.cn/config/series/3857.html', 'https://car.autohome.com.cn/config/series/4630.html', 'https://car.autohome.com.cn/config/series/4552.html', 'https://car.autohome.com.cn/config/series/3859.html', 'https://car.autohome.com.cn/config/series/4588.html', 'https://car.autohome.com.cn/config/series/4766.html', 'https://car.autohome.com.cn/config/series/98.html', 'https://car.autohome.com.cn/config/series/372.html', 'https://car.autohome.com.cn/config/series/4605.html', 'https://car.autohome.com.cn/config/series/64.html', 'https://car.autohome.com.cn/config/series/210.html', 'https://car.autohome.com.cn/config/series/3290.html', 'https://car.autohome.com.cn/config/series/4179.html', 'https://car.autohome.com.cn/config/series/398.html', 'https://car.autohome.com.cn/config/series/2974.html', 'https://car.autohome.com.cn/config/series/2791.html', 'https://car.autohome.com.cn/config/series/4869.html', 'https://car.autohome.com.cn/config/series/3528.html', 'https://car.autohome.com.cn/config/series/373.html', 'https://car.autohome.com.cn/config/series/3941.html', 'https://car.autohome.com.cn/config/series/4342.html', 'https://car.autohome.com.cn/config/series/2980.html', 'https://car.autohome.com.cn/config/series/4554.html', 'https://car.autohome.com.cn/config/series/2806.html', 'https://car.autohome.com.cn/config/series/529.html', 'https://car.autohome.com.cn/config/series/3068.html', 'https://car.autohome.com.cn/config/series/2842.html', 'https://car.autohome.com.cn/config/series/704.html', 'https://car.autohome.com.cn/config/series/4263.html', 'https://car.autohome.com.cn/config/series/4073.html', 'https://car.autohome.com.cn/config/series/2767.html', 'https://car.autohome.com.cn/config/series/2730.html', 'https://car.autohome.com.cn/config/series/2731.html', 'https://car.autohome.com.cn/config/series/4833.html', 'https://car.autohome.com.cn/config/series/4774.html', 'https://car.autohome.com.cn/config/series/606.html', 'https://car.autohome.com.cn/config/series/4405.html', 'https://car.autohome.com.cn/config/series/4404.html', 'https://car.autohome.com.cn/config/series/3547.html', 'https://car.autohome.com.cn/config/series/3878.html', 'https://car.autohome.com.cn/config/series/3695.html', 'https://car.autohome.com.cn/config/series/2941.html', 'https://car.autohome.com.cn/config/series/2967.html', 'https://car.autohome.com.cn/config/series/3267.html', 'https://car.autohome.com.cn/config/series/3309.html', 'https://car.autohome.com.cn/config/series/4832.html', 'https://car.autohome.com.cn/config/series/2256.html', 'https://car.autohome.com.cn/config/series/470.html', 'https://car.autohome.com.cn/config/series/370.html', 'https://car.autohome.com.cn/config/series/2556.html', 'https://car.autohome.com.cn/config/series/4837.html', 'https://car.autohome.com.cn/config/series/790.html', 'https://car.autohome.com.cn/config/series/2769.html', 'https://car.autohome.com.cn/config/series/2323.html', 'https://car.autohome.com.cn/config/series/4421.html', 'https://car.autohome.com.cn/config/series/4262.html', 'https://car.autohome.com.cn/config/series/3963.html', 'https://car.autohome.com.cn/config/series/4496.html', 'https://car.autohome.com.cn/config/series/3979.html', 'https://car.autohome.com.cn/config/series/2988.html', 'https://car.autohome.com.cn/config/series/4255.html', 'https://car.autohome.com.cn/config/series/4371.html', 'https://car.autohome.com.cn/config/series/928.html', 'https://car.autohome.com.cn/config/series/3493.html', 'https://car.autohome.com.cn/config/series/4773.html', 'https://car.autohome.com.cn/config/series/3939.html', 'https://car.autohome.com.cn/config/series/4776.html', 'https://car.autohome.com.cn/config/series/3461.html', 'https://car.autohome.com.cn/config/series/1006.html', 'https://car.autohome.com.cn/config/series/4901.html']
+PZ_URL_LIST2 = ['https://car.autohome.com.cn/config/series/60.html', 'https://car.autohome.com.cn/config/series/3053.html', 'https://car.autohome.com.cn/config/series/4800.html', 'https://car.autohome.com.cn/config/series/5021.html', 'https://car.autohome.com.cn/config/series/2742.html', 'https://car.autohome.com.cn/config/series/560.html', 'https://car.autohome.com.cn/config/series/4940.html', 'https://car.autohome.com.cn/config/series/45.html', 'https://car.autohome.com.cn/config/series/513.html', 'https://car.autohome.com.cn/config/series/964.html', 'https://car.autohome.com.cn/config/series/2388.html', 'https://car.autohome.com.cn/config/series/3774.html', 'https://car.autohome.com.cn/config/series/2544.html', 'https://car.autohome.com.cn/config/series/433.html', 'https://car.autohome.com.cn/config/series/837.html', 'https://car.autohome.com.cn/config/series/2953.html', 'https://car.autohome.com.cn/config/series/3475.html', 'https://car.autohome.com.cn/config/series/3923.html', 'https://car.autohome.com.cn/config/series/3796.html', 'https://car.autohome.com.cn/config/series/4764.html', 'https://car.autohome.com.cn/config/series/398.html', 'https://car.autohome.com.cn/config/series/2966.html', 'https://car.autohome.com.cn/config/series/2085.html', 'https://car.autohome.com.cn/config/series/3343.html', 'https://car.autohome.com.cn/config/series/2236.html', 'https://car.autohome.com.cn/config/series/99.html', 'https://car.autohome.com.cn/config/series/3794.html', 'https://car.autohome.com.cn/config/series/3427.html', 'https://car.autohome.com.cn/config/series/5058.html', 'https://car.autohome.com.cn/config/series/3422.html', 'https://car.autohome.com.cn/config/series/2090.html', 'https://car.autohome.com.cn/config/series/2133.html', 'https://car.autohome.com.cn/config/series/4065.html', 'https://car.autohome.com.cn/config/series/413.html', 'https://car.autohome.com.cn/config/series/3044.html', 'https://car.autohome.com.cn/config/series/3157.html', 'https://car.autohome.com.cn/config/series/2341.html', 'https://car.autohome.com.cn/config/series/2867.html', 'https://car.autohome.com.cn/config/series/2062.html', 'https://car.autohome.com.cn/config/series/537.html', 'https://car.autohome.com.cn/config/series/3978.html', 'https://car.autohome.com.cn/config/series/463.html', 'https://car.autohome.com.cn/config/series/494.html', 'https://car.autohome.com.cn/config/series/3002.html', 'https://car.autohome.com.cn/config/series/4809.html', 'https://car.autohome.com.cn/config/series/540.html', 'https://car.autohome.com.cn/config/series/2787.html', 'https://car.autohome.com.cn/config/series/4987.html', 'https://car.autohome.com.cn/config/series/2952.html', 'https://car.autohome.com.cn/config/series/375.html', 'https://car.autohome.com.cn/config/series/577.html', 'https://car.autohome.com.cn/config/series/2141.html', 'https://car.autohome.com.cn/config/series/2766.html', 'https://car.autohome.com.cn/config/series/22.html', 'https://car.autohome.com.cn/config/series/655.html', 'https://car.autohome.com.cn/config/series/2743.html', 'https://car.autohome.com.cn/config/series/50.html', 'https://car.autohome.com.cn/config/series/3425.html', 'https://car.autohome.com.cn/config/series/365.html', 'https://car.autohome.com.cn/config/series/2847.html', 'https://car.autohome.com.cn/config/series/3673.html', 'https://car.autohome.com.cn/config/series/311.html', 'https://car.autohome.com.cn/config/series/869.html', 'https://car.autohome.com.cn/config/series/2681.html', 'https://car.autohome.com.cn/config/series/175.html', 'https://car.autohome.com.cn/config/series/59.html', 'https://car.autohome.com.cn/config/series/2537.html', 'https://car.autohome.com.cn/config/series/2560.html', 'https://car.autohome.com.cn/config/series/3574.html', 'https://car.autohome.com.cn/config/series/3812.html', 'https://car.autohome.com.cn/config/series/989.html', 'https://car.autohome.com.cn/config/series/2964.html', 'https://car.autohome.com.cn/config/series/777.html', 'https://car.autohome.com.cn/config/series/3961.html', 'https://car.autohome.com.cn/config/series/352.html', 'https://car.autohome.com.cn/config/series/112.html', 'https://car.autohome.com.cn/config/series/77.html', 'https://car.autohome.com.cn/config/series/3177.html', 'https://car.autohome.com.cn/config/series/794.html', 'https://car.autohome.com.cn/config/series/4454.html', 'https://car.autohome.com.cn/config/series/3242.html', 'https://car.autohome.com.cn/config/series/281.html', 'https://car.autohome.com.cn/config/series/591.html', 'https://car.autohome.com.cn/config/series/53.html', 'https://car.autohome.com.cn/config/series/2297.html', 'https://car.autohome.com.cn/config/series/405.html', 'https://car.autohome.com.cn/config/series/4427.html', 'https://car.autohome.com.cn/config/series/4489.html', 'https://car.autohome.com.cn/config/series/2336.html', 'https://car.autohome.com.cn/config/series/3823.html', 'https://car.autohome.com.cn/config/series/2543.html', 'https://car.autohome.com.cn/config/series/578.html', 'https://car.autohome.com.cn/config/series/3040.html', 'https://car.autohome.com.cn/config/series/3300.html', 'https://car.autohome.com.cn/config/series/237.html', 'https://car.autohome.com.cn/config/series/2762.html', 'https://car.autohome.com.cn/config/series/235.html', 'https://car.autohome.com.cn/config/series/267.html', 'https://car.autohome.com.cn/config/series/3464.html', 'https://car.autohome.com.cn/config/series/161.html', 'https://car.autohome.com.cn/config/series/897.html', 'https://car.autohome.com.cn/config/series/305.html', 'https://car.autohome.com.cn/config/series/295.html', 'https://car.autohome.com.cn/config/series/3820.html', 'https://car.autohome.com.cn/config/series/2557.html', 'https://car.autohome.com.cn/config/series/406.html', 'https://car.autohome.com.cn/config/series/4889.html', 'https://car.autohome.com.cn/config/series/3466.html', 'https://car.autohome.com.cn/config/series/3981.html', 'https://car.autohome.com.cn/config/series/3502.html', 'https://car.autohome.com.cn/config/series/3657.html', 'https://car.autohome.com.cn/config/series/4017.html', 'https://car.autohome.com.cn/config/series/3714.html']
+PZ_URL_LIST = ['https://car.autohome.com.cn/config/series/4776.html', 'https://car.autohome.com.cn/config/series/812.html', 'https://car.autohome.com.cn/config/series/3221.html', 'https://car.autohome.com.cn/config/series/3874.html', 'https://car.autohome.com.cn/config/series/3640.html', 'https://car.autohome.com.cn/config/series/4356.html', 'https://car.autohome.com.cn/config/series/4350.html', 'https://car.autohome.com.cn/config/series/4901.html', 'https://car.autohome.com.cn/config/series/3716.html', 'https://car.autohome.com.cn/config/series/3699.html', 'https://car.autohome.com.cn/config/series/2452.html', 'https://car.autohome.com.cn/config/series/3698.html', 'https://car.autohome.com.cn/config/series/4759.html', 'https://car.autohome.com.cn/config/series/4421.html', 'https://car.autohome.com.cn/config/series/780.html', 'https://car.autohome.com.cn/config/series/4073.html', 'https://car.autohome.com.cn/config/series/2542.html', 'https://car.autohome.com.cn/config/series/4066.html', 'https://car.autohome.com.cn/config/series/2138.html', 'https://car.autohome.com.cn/config/series/4897.html', 'https://car.autohome.com.cn/config/series/720.html', 'https://car.autohome.com.cn/config/series/4221.html', 'https://car.autohome.com.cn/config/series/2647.html', 'https://car.autohome.com.cn/config/series/3648.html', 'https://car.autohome.com.cn/config/series/4262.html', 'https://car.autohome.com.cn/config/series/4531.html', 'https://car.autohome.com.cn/config/series/2420.html', 'https://car.autohome.com.cn/config/series/4834.html', 'https://car.autohome.com.cn/config/series/4505.html', 'https://car.autohome.com.cn/config/series/3532.html', 'https://car.autohome.com.cn/config/series/858.html', 'https://car.autohome.com.cn/config/series/163.html', 'https://car.autohome.com.cn/config/series/4441.html', 'https://car.autohome.com.cn/config/series/3003.html', 'https://car.autohome.com.cn/config/series/5138.html', 'https://car.autohome.com.cn/config/series/2999.html', 'https://car.autohome.com.cn/config/series/2770.html', 'https://car.autohome.com.cn/config/series/2998.html', 'https://car.autohome.com.cn/config/series/523.html', 'https://car.autohome.com.cn/config/series/3779.html', 'https://car.autohome.com.cn/config/series/2337.html']
+def item():
+    new_dict = {
+            'ID': '',
+             'CARNAME': '车型名称',
+             'CSZDJ': '厂商指导价(元)',
+            'CS': '厂商',
+            'JIBIE': '级别',
+            'NYLX': '能源类型',
+            'SHANGSSJ': '上市时间',
+            'ZUIDAGL': '最大功率(kW)',
+            'ZUIDANJ': '最大扭矩(N·m)',
+            'FDJ': '发动机',
+            'BIANSX': '变速箱',
+            'CHANGKG': '长*宽*高(mm)',
+            'CHESJG': '车身结构',
+            'ZUIGCS': '最高车速(km/h)',
+            'GUANGF0_100JS': '官方0-100km/h加速(s)',
+            'SHIC0_100JS': '实测0-100km/h加速(s)',
+            'SHIC0_100ZD': '实测100-0km/h制动(m)',
+            'GONGXBZHYH': '工信部综合油耗(L/100km)',
+            'SHICYH': '实测油耗(L/100km)',
+            'ZHENGCZB': '整车质保',
+            'CHANGDU': '长度(mm)',
+            'KUANDU': '宽度(mm)',
+            'GAODU': '高度(mm)',
+            'ZHOUJU': '轴距(mm)',
+            'QIANLUNJU': '前轮距(mm)',
+            'HOULUNJU': '后轮距(mm)',
+            'ZUIXLDJX': '最小离地间隙(mm)',
+            'CHEMENSHU': '车门数(个)',
+            'ZUOWEISHU': '座位数(个)',
+            'YOUXRJ': '油箱容积(L)',
+            'XINGLXRJ': '行李厢容积(L)',
+            'ZHENGBZL': '整备质量(kg)',
+            'FADJXH': '发动机型号',
+            'PAILIANGML': '排量(mL)',
+            'PAILIANGL': '排量(L)',
+            'JINQXS': '进气形式',
+            'QIGPLXS': '气缸排列形式',
+            'QIGANGSHU': '气缸数(个)',
+            'MEIGQMS': '每缸气门数(个)',
+            'YANSUOBI': '压缩比',
+            'PEIQJG': '配气机构',
+            'GANGJIN': '缸径(mm)',
+            'XINGCHENG': '行程(mm)',
+            'ZUIDAML': '最大马力(Ps)',
+            'ZUIDAGLZS': '最大功率转速(rpm)',
+            'ZUIDANJZS': '最大扭矩转速(rpm)',
+            'FADJTYJS': '发动机特有技术',
+            'RANLIAOXS': '燃料形式',
+            'RANYOUBH': '燃油标号',
+            'GONGYOUFS': '供油方式',
+            'GANGGCL': '缸盖材料',
+            'GANGTCL': '缸体材料',
+            'HUANBBZ': '环保标准',
+            'DANGWEIGS': '挡位个数',
+            'BIANSUXIANGLX': '变速箱类型',
+            'JIANCHENG': '简称',
+            'QUDONGFS': '驱动方式',
+            'SIQUXINGS': '四驱形式',
+            'ZHONGYCSQJG': '中央差速器结构',
+            'QIANXJLX': '前悬架类型',
+            'HOUXJLX': '后悬架类型',
+            'ZHULILX': '助力类型',
+            'CHETIJG': '车体结构',
+            'QIANZDQLX': '前制动器类型',
+            'HOUZDQLX': '后制动器类型',
+            'ZHUCZDLX': '驻车制动类型',
+            'QIANLTGG': '前轮胎规格',
+            'HOULTGG': '后轮胎规格',
+            'BEITGG': '备胎规格',
+            'ZHUFUJSZAQQL': '主/副驾驶座安全气囊',
+            'QIANHOUPCQL': '前/后排侧气囊',
+            'QIANHOUPTBQL': '前/后排头部气囊(气帘)',
+            'XIBUQL': '膝部气囊',
+            'TAIYAJCZZ': '胎压监测功能',
+            'LINGTYJXXS': '零胎压继续行驶',
+            'ANQDWXTS': '安全带未系提醒',
+            'ISOFINERTZYJK': 'ISOFIX儿童座椅接口',
+            'ABSFANGBS': 'ABS防抱死',
+            'ZHIDLFP': '制动力分配(EBD/CBC等)',
+            'SHACFZ': '刹车辅助(EBA/BAS/BA等)',
+            'QIANYINLKZ': '牵引力控制(ASR/TCS/TRC等)',
+            'CHESHENWDKZ': '车身稳定控制(ESC/ESP/DSC等)',
+            'BINGXFZ': '并线辅助',
+            'CHEDPLYJXT': '车道偏离预警系统',
+            'ZHUDSCZDAQXT': '主动刹车/主动安全系统',
+            'YESHIXT': '夜视系统',
+            'PILJSTS': '疲劳驾驶提示',
+            'QIANHZCLD': '前/后驻车雷达',
+            'DAOCESPYX': '驾驶辅助影像',
+            'QUANJSXT': '全景摄像头',
+            'DINGSXH': '定速巡航',
+            'ZISYXH': '巡航系统',
+            'ZIDBCRW': '自动泊车入位',
+            'FADJQTJS': '发动机启停技术',
+            'SHANGPFZ': '上坡辅助',
+            'ZIDONGZC': '自动驻车',
+            'DOUPOHJ': '陡坡缓降',
+            'KEBXJ': '可变悬架功能',
+            'KONGQXJ': '空气悬架',
+            'DIANCGYXJ': '电磁感应悬架',
+            'KEBZXB': '可变转向比',
+            'QIANQXHCSQ': '限滑差速器/差速锁',
+            'ZHONGYCSQSZGN': '中央差速器锁止功能',
+            'HOUQXHCSQ': '后桥限滑差速器/差速锁',
+            'ZHENGTZDZXXT': '整体主动转向系统',
+            'DIANDTC': '电动天窗',
+            'QUANJTC': '全景天窗',
+            'YUNDWGTJ': '运动外观套件',
+            'LVHJLQ': '铝合金轮圈',
+            'DIANDXHM': '电动吸合门',
+            'CEHUAM': '侧滑门',
+            'DIANDHBX': '电动后备厢',
+            'GANYHBX': '感应后备厢',
+            'CHEDXLJ': '车顶行李架',
+            'FADJDZFD': '发动机电子防盗',
+            'CHENZKS': '车内中控锁',
+            'YAOKYS': '遥控钥匙',
+            'WUYSQDXT': '无钥匙启动系统',
+            'WUYSJRXT': '无钥匙进入系统',
+            'YUANCQD': '远程启动',
+            'PIZFXP': '皮质方向盘',
+            'FANGXPTJ': '方向盘调节',
+            'FANGXPDDTJ': '方向盘电动调节',
+            'DUOGNFXP': '多功能方向盘',
+            'FANGXPHD': '方向盘换挡',
+            'FANGXPJR': '方向盘加热',
+            'FANGXPJY': '方向盘记忆',
+            'XINGCDNXSP': '行车电脑显示屏',
+            'QUANYJBP': '全液晶仪表盘',
+            'HUDTAITSZXS': 'HUD抬头数字显示',
+            'NEIZXCJLY': '内置行车记录仪',
+            'ZHUDJZ': '主动降噪',
+            'SHOUJWXCD': '手机无线充电',
+            'ZUOYCZ': '座椅材质',
+            'YUNDFGZY': '运动风格座椅',
+            'ZUOYGDTJ': '座椅高低调节',
+            'YAOBZCTJ': '腰部支撑调节',
+            'JIANBZCTJ': '肩部支撑调节',
+            'ZHUFJSZDDTJ': '主/副驾驶座电动调节',
+            'DIEPKBJDTJ': '第二排靠背角度调节',
+            'DIEPZYYD': '第二排座椅移动',
+            'HOUPZYDDTJ': '后排座椅电动调节',
+            'FUJSWHPKTJAN': '副驾驶位后排可调节按钮',
+            'DIANDZYJY': '电动座椅记忆',
+            'QIANHPZYJR': '前/后排座椅加热',
+            'QIANHPZYTF': '前/后排座椅通风',
+            'QIANHPZYAM': '前/后排座椅按摩',
+            'DIEPDLZY': '第二排独立座椅',
+            'DISPZY': '第三排座椅',
+            'HOUPZYFDFS': '后排座椅放倒方式',
+            'QIANHZYFS': '前/后中央扶手',
+            'HOUPHJ': '后排杯架',
+            'KEJRZLHJ': '可加热/制冷杯架',
+            'GPSDAOHXT': 'GPS导航系统',
+            'DAOLJYHJ': '道路救援呼叫',
+            'ZHONGKTCSDP': '中控台彩色大屏',
+            'ZHONGKTCSDPCC': '中控台彩色大屏尺寸',
+            'ZHONGKYJPFPXS': '中控液晶屏分屏显示',
+            'LANYCZDH': '蓝牙/车载电话',
+            'SHOUJHLYS': '手机互联/映射',
+            'CHELW': '车联网',
+            'CHEZDS': '车载电视',
+            'HOUPYJP': '后排液晶屏',
+            'DIANYUAN': '220V/230V电源',
+            'WAIJYYJK': '外接音源接口',
+            'CDDVD': 'CD/DVD',
+            'YANGSQPP': '扬声器品牌',
+            'YANGSQSL': '扬声器数量',
+            'JINGD': '近光灯',
+            'YUANGD': '远光灯',
+            'LEDRIJXCD': 'LED日间行车灯',
+            'ZISYYJG': '自适应远近光',
+            'ZIZTD': '自动头灯',
+            'ZHUANGXFZD': '转向辅助灯',
+            'ZHUANXTD': '转向头灯',
+            'QIANWD': '前雾灯',
+            'DADGDKT': '大灯高度可调',
+            'DADQXZZ': '大灯清洗装置',
+            'CHENFWD': '车内氛围灯',
+            'QIANHDDCC': '前/后电动车窗',
+            'CHECYJSJ': '车窗一键升降',
+            'CHECFJSGN': '车窗防夹手功能',
+            'FANGZWXGRBL': '防紫外线/隔热玻璃',
+            'HOUSJDDTJ': '后视镜电动调节',
+            'HOUSJJR': '后视镜加热',
+            'NEIWHSJZDFXM': '内/外后视镜自动防眩目',
+            'LIUMTCNHSJ': '流媒体车内后视镜',
+            'HOUSJDDZD': '后视镜电动折叠',
+            'HOUSJJY': '后视镜记忆',
+            'HOUFDZYL': '后风挡遮阳帘',
+            'HOUPCZYL': '后排侧遮阳帘',
+            'HOUPCYSBL': '后排侧隐私玻璃',
+            'ZHEYBHZJ': '遮阳板化妆镜',
+            'HOUYS': '后雨刷',
+            'GANYYS': '感应雨刷',
+            'KONGTKZFS': '空调控制方式',
+            'HOUPDLKT': '后排独立空调',
+            'HOUZCFK': '后座出风口',
+            'WENDFQKZ': '温度分区控制',
+            'CHENKQTJ': '车内空气调节/花粉过滤',
+            'CHEZKQJHQ': '车载空气净化器',
+            'CHEZBX': '车载冰箱',
+            'COLOR1': '',
+            'COLOR2': '',
+            'COLOR3': '',
+            'COLOR4': '',
+            'COLOR5': '',
+            'COLOR6': '',
+            'COLOR7': '',
+            'COLOR8': '',
+            'COLOR9': '',
+            'COLOR10': '',
+            'DUOTC': '多天窗',
+            'SHOUJHLYSGN': '手机互联/映射功能',
+            'SUOSHUCX': '所属车型',
+            'GONGXBCDXSLC': '工信部纯电续驶里程(km)',
+            'KUAICDLBFB': '快充电量百分比',
+            'CHEXJY': '车型距元',
+            'CHEXINGHJ': '车型合积',
+            'HOUPAQDSQL': '后排中央安全气囊',
+            'SHICEXHLC': '实测续航里程(km)',
+            'KUAICSJ': '快充时间(小时)',
+            'MANCSJ': '慢充时间(小时)',
+            'SHICEKCSJ': '实测快充时间(小时)',
+            'SHICEMCSJ': '实测慢充时间(小时)',
+            'DIANJLX': '电机类型',
+            'CHEDBCFZXT': '车道保持辅助系统',
+            'DADYSGB': '大灯延时关闭',
+            'CHUMSYDD': '触摸式阅读灯',
+            'FANGZWXBL': '防紫外线玻璃',
+            'WAIHSJGN': '外后视镜功能',
+            'NEIHSJGN': '内后视镜功能',
+            'KEJIARPSZ': '可加热喷水嘴',
+            'CHENPMGLZB': '车内PM2.5过滤装置',
+            'FULZFSQ': '负离子发生器',
+            'CHENXFZZ': '车内香氛装置',
+            'XINGLXVDYJK': '行李厢12V电源接口',
+            'USBJKSL': 'USB/Type-C接口数量',
+            'HOUPKZDMT': '后排控制多媒体',
+            'SHOUSKZ': '手势控制',
+            'YUYSBKZXT': '语音识别控制系统',
+            'DAOHLKXXXS': '导航路况信息显示',
+            'ZHONGKYJPCC': '中控液晶屏尺寸',
+            'ZHONGKCSYJPM': '中控彩色液晶屏幕',
+            'HOUPZYDDFD': '后排座椅电动放倒',
+            'HOUPZYFDXS': '后排座椅放倒形式',
+            'HOUPXZB': '后排小桌板',
+            'DIEPZYTJ': '第二排座椅调节',
+            'FUZYTJFS': '副座椅调节方式',
+            'ZHUZYTJFS': '主座椅调节方式',
+            'DIANDKDTB': '电动可调踏板',
+            'FANGXPCZ': '方向盘材质',
+            'ZHUDBHSJQGS': '主动闭合式进气格栅',
+            'YAOSLX': '钥匙类型',
+            'WEIMBLDLKQ': '尾门玻璃独立开启',
+            'DIANDHBXWZJY': '电动后备厢位置记忆',
+            'LUNQCZ': '轮圈材质',
+            'TIANCLX': '天窗类型',
+            'SHESGYXT': '涉水感应系统',
+            'ZIDJSJS': '自动驾驶技术',
+            'XUNHXT': '巡航系统',
+            'DAOCCCYJXT': '倒车车侧预警系统',
+            'JIASFZYX': '驾驶辅助影像',
+            'DAOLJTBSSB': '道路交通标识识别',
+            'TAIYJCGN': '胎压监测功能',
+            'BEIDXRBH': '被动行人保护',
+            'HOUPAQSQL': '后排安全带式气囊',
+            'QIANPZYGN': '前排座椅功能',
+            'GANYYSGN': '感应雨刷功能',
+            'JIASMSQH': '驾驶模式切换',
+            'CHECYJSJGN': '车窗一键升降功能',
+            'YEJYBCC': '液晶仪表尺寸',
+            'DIANDJZGL': '电动机总功率(kW)',
+            'DIANDJZNJ': '电动机总扭矩(N·m)',
+            'QIANDDJZDGL': '前电动机最大功率(kW)',
+            'QIANDDJZDNJ': '前电动机最大扭矩(N·m)',
+            'HOUDDJZDGL': '后电动机最大功率(kW)',
+            'HOUDDJZDNJ': '后电动机最大扭矩(N·m)',
+            'XITZHGL': '系统综合功率(kW)',
+            'XITZHNJ': '系统综合扭矩(N·m)',
+            'QUDDJS': '驱动电机数',
+            'DIANJBJ': '电机布局',
+            'DIANCLX': '电池类型',
+            'GONGXBXHLC': '工信部续航里程(km)',
+            'DIANCRL': '电池容量(kWh)',
+            'BAIGLHDL': '百公里耗电量(kWh/100km)',
+            'DIANCZZB': '电池组质保',
+            'KUAICDL': '快充电量(%)',
+            'DIANDJ': '电动机',
+            'CHENHJFWD': '车内环境氛围灯',
+            'ZUOYBJ': '座椅布局',
+            'HOUPZYGN': '后排座椅功能',
+            'YANGSQPPMC': '扬声器品牌名称',
+            'DUOCGYBL': '多层隔音玻璃',
+            'CHECJTB': '车侧脚踏板',
+            'QIANDDYWMS': '前大灯雨雾模式',
+            'DENGGTEGN': '灯光特色功能',
+            'XIANHCSQ': '限滑差速器/差速锁',
+            'HUOXCC': '货箱尺寸(mm)',
+            'ZUIDZZZL': '最大载重质量(kg)',
+            'DIANCCDSJ': '电池充电时间',
+            'HOUPCMKQFS': '后排车门开启方式'
+            }
+    return new_dict
